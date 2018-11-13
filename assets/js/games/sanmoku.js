@@ -8,7 +8,7 @@ $(function(){
     choice = $(this);
     $(choice).addClass("maru");
     turn_action();
-    // CPUのアクション
+    // AIのアクション
     if (judge()==true) {
       $("table").addClass("noclick");
       // ランダムでマスを選択
@@ -25,7 +25,7 @@ $(function(){
   });
   function turn_action() {
     if (turn%2==1) {
-      $(".text").text("CPU's turn ");
+      $(".text").text("AI's turn ");
     } else {
       $(".text").text("Your turn");
     }
