@@ -1,0 +1,132 @@
+@charset "UTF-8";
+.wrap {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 51vh;
+}
+
+table {
+  border-collapse: collapse;
+  box-sizing: boeder-box;
+}
+
+td,
+th {
+  box-sizing: border-box;
+}
+
+td {
+  border: 1px solid #000;
+  width: 17vh;
+  height: 17vh;
+  cursor: pointer;
+}
+
+tr:first-child td {
+  border-top: solid 2px #FFF;
+}
+
+tr:last-child td {
+  border-bottom: solid 2px #FFF;
+}
+
+td:first-child {
+  border-left: solid 2px #FFF;
+}
+
+td:last-child {
+  border-right: solid 2px #FFF;
+}
+
+td.maru {
+  background: #F55;
+}
+
+td.batu {
+  background: #5F5;
+}
+
+td.maru,
+td.batu {
+  pointer-events: none;
+}
+
+td:hover {
+  border: 2px solid #F55 !important;
+}
+
+table.noclick {
+  pointer-events: none;
+}
+
+table.win,
+table.lose,
+table.draw {
+  pointer-events: none;
+  position: relative;
+}
+table.win::after,
+table.lose::after,
+table.draw::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(80, 80, 80, 0.75);
+  top: 0;
+  left: 0;
+  text-align: center;
+  line-height: 16;
+  font-size: 5vh;
+  font-weight: bold;
+  color: #FFF;
+}
+
+table.win::after {
+  content: "You WIN!";
+}
+
+table.lose::after {
+  content: "CPU WIN";
+}
+
+table.draw::after {
+  content: "Draw";
+}
+
+.reset_wrap {
+  position: absolute;
+  height: 90vh;
+  width: 90vh;
+  left: 0;
+  top: 0;
+  text-align: center;
+  display: none;
+}
+
+.reset {
+  cursor: pointer;
+  color: #FFF;
+  border: solid 1px #333;
+  padding: 1vh 2vh;
+  font-size: 3vh;
+  width: 20vh;
+  margin: 50vh auto 0;
+}
+.reset:hover {
+  background: #FFF;
+  color: #333;
+}
+
+.text {
+  position: absolute;
+  right: 2vh;
+  bottom: 0;
+  margin: 0;
+  font-size: 4vh;
+}
